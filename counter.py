@@ -23,11 +23,16 @@ def get_result():
 
     loginButton = browser.find_element_by_class_name("v-btn__content")
     loginButton.click()
-
-    entry = browser.find_element_by_class_name("enter").text
-    entry = int(re.search(r'\d+', entry).group())
-    leave = browser.find_element_by_class_name("leave").text
-    leave = int(re.search(r'\d+', leave).group())
+    try:
+        entry = browser.find_element_by_class_name("enter").text
+        entry = int(re.search(r'\d+', entry).group())
+        leave = browser.find_element_by_class_name("leave").text
+        leave = int(re.search(r'\d+', leave).group())
+    except:
+        entry = 0
+        leave = 0
+    finally:
+        browser.quit()
     browser.quit()
     return entry-leave
 
@@ -56,6 +61,7 @@ def background_thread():
     while True:
         socketio.sleep(3)
         count = get_result()
+        time.sleep(5)
         socketio.emit('my_response',
                       {'count': count},
                       namespace='/test')
@@ -81,10 +87,8 @@ def test_message(message):
 
 @socketio.on('connect', namespace='/test')
 def test_connect():
-    print("Usao u tred")
     global thread
     with thread_lock:
-        print("U tred loku")
         if thread is None:
             thread = socketio.start_background_task(background_thread)
     emit('my_response', {'data': 'Connected', 'count': 0})

@@ -41,6 +41,14 @@ $(document).ready(function(){
              font-weight: bold;
              text-shadow: 2px 2px lightgray;
             }
+    .clocktext {
+             color: midnightblue;
+             font-size: 3.5em;
+             text-align: center;
+             margin: 0 auto;
+             font-weight: bold;
+             text-shadow: 2px 2px lightgray;
+            }
 
 </style>
 </head>
@@ -50,7 +58,7 @@ $(document).ready(function(){
         <div class="container d-flex justify-content-between">
           <a href="#" class="navbar-brand d-flex align-items-center">
             <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mr-2"><path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"></path><circle cx="12" cy="13" r="4"></circle></svg>
-            <strong>Security & Safety Things - office occupancy current daily / peak dow info</strong>
+            <strong>Security & Safety Things - office occupancy current daily info</strong>
           </a>
         </div>
       </div>
@@ -72,51 +80,62 @@ $(document).ready(function(){
             <div class="col-md-4">
               <div class="card mb-4 box-shadow">
                 <div class="card-body">
-                    <p class="leadtext">Monday</p>
+                    <p class="leadtext">Current time</p>
                   <div class="d-flex justify-content-between align-items-center">
+                      <div class="clocktext">
+                        <script>
+                          var myVar = setInterval(function() {
+                        myTimer();
+                            }, 1000);
+
+                                  function myTimer() {
+                                    var d = new Date();
+                                    var day = d.getDate();
+                                    var month = d.getMonth()+1;
+                                    var year = d.getFullYear();
+                                    document.getElementById("clock").innerHTML = d.toLocaleTimeString();
+                                    document.getElementById("day").innerHTML = day;
+                                    document.getElementById("month").innerHTML = month;
+                                    document.getElementById("year").innerHTML = year;
+
+                                  }
+                        </script>
+                        <p id="clock"></p>
+
+
+
+
+                      </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-12">
+               <div class="card mb-4 box-shadow">
+                  <div class="card-body">
+                    <p class="card-text">Last 7 days</p>
+                    <div class="d-flex justify-content-between align-items-center">
                       <div class="bigtext">7</div>
+                    </div>
                   </div>
                 </div>
-              </div>
-            </div>
-
+          </div>
             <div class="col-md-4">
               <div class="card mb-4 box-shadow">
                 <div class="card-body">
-                  <p class="card-text">Tuesday</p>
+                  <p class="card-text">Day</p>
                   <div class="d-flex justify-content-between align-items-center">
-                    <div class="bigtext">7</div>
+                    <div class="bigtext"><p id="day"></p></div>
                   </div>
                 </div>
               </div>
-            </div>
-            <div class="col-md-4">
-              <div class="card mb-4 box-shadow">
-                <div class="card-body">
-                  <p class="card-text">Wednesday</p>
-                  <div class="d-flex justify-content-between align-items-center">
-                    <div class="bigtext">7</div>
-                  </div>
-                </div>
               </div>
-            </div>
             <div class="col-md-4">
               <div class="card mb-4 box-shadow">
                 <div class="card-body">
-                  <p class="card-text">Thursday</p>
+                  <p class="card-text">Month</p>
                   <div class="d-flex justify-content-between align-items-center">
-                    <div class="bigtext">7</div>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div class="col-md-4">
-              <div class="card mb-4 box-shadow">
-                <div class="card-body">
-                  <p class="card-text">Friday</p>
-                  <div class="d-flex justify-content-between align-items-center">
-                    <div class="bigtext">7</div>
+                    <div class="bigtext"><p id="month"></p></div>
                   </div>
                 </div>
               </div>
@@ -124,19 +143,9 @@ $(document).ready(function(){
             <div class="col-md-4">
               <div class="card mb-4 box-shadow">
                 <div class="card-body">
-                  <p class="card-text">Saturday</p>
+                  <p class="card-text">Year</p>
                   <div class="d-flex justify-content-between align-items-center">
-                    <div class="bigtext">7</div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="col-md-4">
-              <div class="card mb-4 box-shadow">
-                <div class="card-body">
-                  <p class="card-text">Sunday</p>
-                  <div class="d-flex justify-content-between align-items-center">
-                    <div class="bigtext">7</div>
+                    <div class="bigtext"><p id="year"></p></div>
                   </div>
                 </div>
               </div>
