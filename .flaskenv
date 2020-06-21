@@ -1,0 +1,2 @@
+FLASK_APP=counter.py
+FLASK_DEBUG=0
