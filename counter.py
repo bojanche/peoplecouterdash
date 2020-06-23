@@ -13,9 +13,8 @@ def get_result():
     options.add_argument("--headless")
     print(options)
 
-    browser = webdriver.Chrome(executable_path="chromedriver.exe", options=options)
-    browser.get('https://192.168.39.102:8443/#/login/?referrer=%2Fapp%2Feu.saimos.edge.count%2Fstats')
-
+    browser = webdriver.Chrome(executable_path="chromedriver", options=options)
+    browser.get('https://192.168.0.110:8443/#/login/?referrer=%2Fapp%2Feu.saimos.edge.count%2Fstats')
     loginElement = browser.find_element_by_xpath("//input[@aria-label='Username']")
     loginElement.send_keys('admin')
     passwordElement = browser.find_element_by_xpath("//input[@aria-label='Password']")
@@ -24,6 +23,7 @@ def get_result():
     loginButton = browser.find_element_by_class_name("v-btn__content")
     loginButton.click()
     try:
+        time.sleep(3)
         entry = browser.find_element_by_class_name("enter").text
         entry = int(re.search(r'\d+', entry).group())
         leave = browser.find_element_by_class_name("leave").text
