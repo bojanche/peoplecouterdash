@@ -1,0 +1,73 @@
+@font-face {
+    font-family: GraphikRegular;
+    src: url("font/GraphikRegular.otf") format("opentype");
+}
+
+
+body,
+html {
+     height: 99%;
+     /* font-family: GraphikRegular; */
+     font-size: 83px;
+     color: #000;
+     background-color: #fff;
+}
+
+.main-wrapper {
+  height: 100vh;
+}
+
+.logo {
+  float: left;
+	padding-top: 50px;
+	padding-left: 50px;
+}
+
+.textual {
+  float: left;
+  padding-top: 50px;
+  padding-left: 250px;
+}
+
+.small {
+  font-size: 63px;
+}
+
+.low-left {
+  position: absolute;
+  bottom: 0px;
+  overflow: auto;
+}
+
+.low-right {
+  position: absolute;
+  bottom: 0px;
+  right: 35px;
+}
+
+
+#box {
+  float: left;
+  padding-left: 50px;
+}
+
+.datum {
+  float: left;
+  color: #000;
+}
+
+.vreme {
+  float: left;
+}
+
+.middleone {
+  margin: auto;
+  padding-top: 140px;
+  font-weight: bold;
+  font-size: 63px;
+}
+
+.bigorange {
+  font-size: 140px;
+  color: #FF4300;
+}
