@@ -19,7 +19,7 @@ def get_result(adres):
     options.add_argument("--disable-gpu")
     options.add_argument("--no-proxy-server")
     browser = webdriver.Chrome(executable_path="chromedriver.exe", options=options, service_args=["--verbose", "--log-path=chromedirver.log"])
-    browser.get('https://'+adres+':8443/#/login/?referrer=https%3A%2F%2F192.168.2.112%3A8443%2Fapp%2Feu.saimos.edge.count%2Fstats')
+    browser.get('https://'+adres+':8443/#/login/?referrer=https%3A%2F%2F'+adres+'%3A8443%2Fapp%2Feu.saimos.edge.count%2Fstats')
     loginElement = browser.find_element_by_id("Login_username")
     loginElement.send_keys('bojan')
     passwordElement = browser.find_element_by_id("Login_password")

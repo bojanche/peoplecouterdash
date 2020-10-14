@@ -19,8 +19,9 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b3d1a264-b8a4-4137-acad-add6aac5c060" name="Default Changelist" comment="new template and mouse +- functionality">
+    <list default="true" id="b3d1a264-b8a4-4137-acad-add6aac5c060" name="Default Changelist" comment="Socketio">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/chromedirver.log" beforeDir="false" afterPath="$PROJECT_DIR$/chromedirver.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/counter.py" beforeDir="false" afterPath="$PROJECT_DIR$/counter.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/index.html" afterDir="false" />
     </list>
@@ -54,6 +55,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="TERMINAL_CUSTOM_COMMANDS_GOT_IT" value="true" />
+    <property name="ignore_missing_gitignore" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
@@ -110,7 +112,21 @@
       <option name="project" value="LOCAL" />
       <updated>1602424219666</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="new template and mouse +- functionality">
+      <created>1602424893226</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1602424893226</updated>
+    </task>
+    <task id="LOCAL-00007" summary="Socketio">
+      <created>1602426103694</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1602426103694</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -134,7 +150,8 @@
     <MESSAGE value="v2" />
     <MESSAGE value="v21" />
     <MESSAGE value="new template and mouse +- functionality" />
-    <option name="LAST_COMMIT_MESSAGE" value="new template and mouse +- functionality" />
+    <MESSAGE value="Socketio" />
+    <option name="LAST_COMMIT_MESSAGE" value="Socketio" />
   </component>
   <component name="WindowStateProjectService">
     <state x="-529" y="255" width="440" height="615" key="FileChooserDialogImpl" timestamp="1601618300992">
@@ -149,9 +166,13 @@
       <screen x="0" y="0" width="1770" height="1050" />
     </state>
     <state x="386" y="170" key="SettingsEditor/0.0.1770.1050/-1920.8.1920.1050@0.0.1770.1050" timestamp="1602410937561" />
-    <state x="477" y="258" key="Vcs.Push.Dialog.v2" timestamp="1602424229039">
+    <state x="477" y="258" key="Vcs.Push.Dialog.v2" timestamp="1602451883960">
       <screen x="0" y="0" width="1770" height="1050" />
     </state>
-    <state x="477" y="258" key="Vcs.Push.Dialog.v2/0.0.1770.1050/-1920.8.1920.1050@0.0.1770.1050" timestamp="1602424229039" />
+    <state x="477" y="258" key="Vcs.Push.Dialog.v2/0.0.1770.1050/-1920.8.1920.1050@0.0.1770.1050" timestamp="1602451883960" />
+    <state x="678" y="426" key="git4idea.remote.GitConfigureRemotesDialog" timestamp="1602425859287">
+      <screen x="0" y="0" width="1770" height="1050" />
+    </state>
+    <state x="678" y="426" key="git4idea.remote.GitConfigureRemotesDialog/0.0.1770.1050/-1920.8.1920.1050@0.0.1770.1050" timestamp="1602425859287" />
   </component>
 </project>

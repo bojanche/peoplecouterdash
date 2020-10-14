@@ -8,7 +8,6 @@
     <script src="{{ url_for('static', filename='js/bootstrap.min.js') }}"></script>
     <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
     <script src="{{ url_for('static', filename='js/socket.io.js') }}"></script>
-    <link rel="icon" type="image/png" href="{{ url_for('static', filename='images/favicon.png') }}" />
 
     <script type="text/javascript" charset="utf-8">
         $(document).ready(function(){
@@ -24,15 +23,16 @@
                     console.log(msg.count);});
 
             $("#counter-log").mousedown(function(event) {
-                    $(this).bind("contextmenu", function(e) {
-                        e.preventDefault();
-                    });
+                                    $(this).bind("contextmenu", function(e) {
+                                        e.preventDefault();
+                                    });
                     console.log("Misko stisnut: ", event.which)
                     socket.emit('message', {data: event.which});
                     });
         });
     </script>
-    <title>S&ST - Office Occupancy counter</title>
+ <title>S&ST - Office Occupancy counter</title>
+    <link rel="icon" type="image/png" href="{{ url_for('static', filename='images/favicon.png') }}" />
 </head>
 <body>
   <div class="container-fluid">
